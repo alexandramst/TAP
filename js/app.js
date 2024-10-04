@@ -79,11 +79,11 @@
 // myBold.style.color = '##132fba';
 
 
-let myH2s = document.querySelectorAll('h2');
-console.log(myH2s);
-for(let myH2 of myH2s){
-    myH2.style.color = 'violet';
-}
+// let myH2s = document.querySelectorAll('h2');
+// console.log(myH2s);
+// for(let myH2 of myH2s){
+//     myH2.style.color = 'violet';
+// }
 
 
 
@@ -92,5 +92,5 @@ for(let myH2 of myH2s){
 // let daysOfWeek = ['segunda','terça','quarta'];
 
 // for(let element of daysOfWeek){
-//     console.log(weekDay.toUpperCase());
+//     consle.log(weekDay.toUpperCase());
 
