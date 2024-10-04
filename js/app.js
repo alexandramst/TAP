@@ -50,26 +50,47 @@
 
 
 
-let login = false;
-let myName=null;
-let userPhoto= null;
+// let login = false;
+// let myName=null;
+// let userPhoto= null;
 
-let mySpan = document.getElementById ('my-welcome-name');
+// let mySpan = document.getElementById ('my-welcome-name');
 
-let myPhoto = document.getElementById('my-photo');
+// let myPhoto = document.getElementById('my-photo');
 
-myName = prompt('Qual é o teu nome? ');
+// myName = prompt('Qual é o teu nome? ');
 
 
-if(myName){
-    login ==  true;
-    userPhoto = '../imagens/smile.jpg';
+// if(myName){
+//     login ==  true;
+//     userPhoto = '../imagens/smile.jpg';
 
-    mySpan.innerText = myName;
-    myPhoto.scr = userPhoto;
+//     mySpan.innerText = myName;
+//     myPhoto.scr = userPhoto;
 
-    if(userPhoto){
-        myPhoto.scr = userPhoto;
-    }
+//     if(userPhoto){
+//         myPhoto.scr = userPhoto;
+//     }
 
+// }
+
+// selecionar o Olá do index-html
+// let myContainer = document.querySelector('#container');
+// myBold.style.color = '##132fba';
+
+
+let myH2s = document.querySelectorAll('h2');
+console.log(myH2s);
+for(let myH2 of myH2s){
+    myH2.style.color = 'violet';
 }
+
+
+
+//myH2s.style.color = 'green';
+//mesma lógica
+// let daysOfWeek = ['segunda','terça','quarta'];
+
+// for(let element of daysOfWeek){
+//     console.log(weekDay.toUpperCase());
+
