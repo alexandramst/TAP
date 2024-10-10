@@ -28,15 +28,35 @@ function createMessage(message, isUser = true) {
     newMessage.classList.add(isUser ? 'sentText' : 'botText');
     newMessage.textContent = message;
     chatMessages.appendChild(newMessage);
+
+    if(isUser){
+        chatbotResponse(message);
+
+    }
+
     return newMessage;
 }
 
-function chatbotResponse() {
-    const messages = ["Hello!", "How can I assist you?", "Let me know if you have any further questions"];
-    const randomIndex = Math.floor(Math.random() * messages.length);
-    const message = messages[randomIndex];
-    const botMessage = createMessage(message, false);
+function chatbotResponse(myMessage) {
+    let message = '';
+    let botMessage;
+    
+    switch(myMessage.toLowerCase()){
+    case 'orçamento':
+    message = 'Envie o seu pedido para orçamentos@gmail.com';
+    botMessage = createMessage(message, false);
+    break;
+    case 'contacto':
+    message = 'iremos contacta-lo, envie o contacto para  9636666666';
+    botMessage = createMessage(message, false);
+    break;
+    default:
+    message = 'geral@gmail.com';
+    botMessage = createMessage(message, false);
+    break;
+    }
     botMessage.scrollIntoView();
+ 
 }
 
 chatInput.addEventListener("input", function (event) {
@@ -51,10 +71,9 @@ chatInput.addEventListener("keypress", function (event) {
     if (event.keyCode === 13) {
         const message = chatInput.value;
         chatInput.value = "";
-        /*console.log('test1'+message);*/
         const userMessage = createMessage(message);
         userMessage.scrollIntoView();
-        setTimeout(chatbotResponse, 1000);
+        //setTimeout(chatbotResponse, 1000);
         sendButton.classList.add("svgsent");
     }
 });
@@ -63,10 +82,9 @@ if (sendButton) {
     sendButton.addEventListener("click", function () {
         const message = chatInput.value;
         chatInput.value = "";
-        /*console.log('test2'+message);*/
         const userMessage = createMessage(message);
         userMessage.scrollIntoView();
-        setTimeout(chatbotResponse, 1000);
+        //setTimeout(chatbotResponse, 1000);
         sendButton.classList.add("svgsent");
     });
 }
