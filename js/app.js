@@ -94,3 +94,13 @@
 // for(let element of daysOfWeek){
 //     consle.log(weekDay.toUpperCase());
 
+// function dangerLevel(){
+//     if(myBtn.classList.contains('btn-danger')){
+//         myBtn.classList.remove('btn-danger'); //remove classe do elemento
+//         myBtn.classList.add('btn-warning'); // adiciona classe ao elemento
+//     }else{
+//         myBtn.classList.remove('btn-warning');
+//         myBtn.classList.add('btn-danger')
+//     }
+ 
+// }
