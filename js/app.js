@@ -104,3 +104,15 @@
 //     }
  
 // }
+
+let myP = document.querySelector("p");
+
+myP.addEventListener("click", function(event){
+    alert("cucu");
+    console.log(event);
+});
+
+
+window.addEventListener("keydown", function(event){
+    console.log(event.code);
+});
